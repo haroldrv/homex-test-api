@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeXTest.Repository", "Hom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeXTest.Domain", "HomeXTest.Domain\HomeXTest.Domain.csproj", "{718E38F3-ACC9-480D-9BA2-2546EC937487}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeXTest.RepositoryInterfaces", "HomeXTest.RepositoryInterfaces\HomeXTest.RepositoryInterfaces.csproj", "{2772BF8A-DD16-4C07-9571-C7A900B6EC23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{718E38F3-ACC9-480D-9BA2-2546EC937487}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{718E38F3-ACC9-480D-9BA2-2546EC937487}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{718E38F3-ACC9-480D-9BA2-2546EC937487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2772BF8A-DD16-4C07-9571-C7A900B6EC23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2772BF8A-DD16-4C07-9571-C7A900B6EC23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2772BF8A-DD16-4C07-9571-C7A900B6EC23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2772BF8A-DD16-4C07-9571-C7A900B6EC23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{C48DAD5B-228A-44D8-B009-D00AA713F469} = {0CB26698-27CC-42D2-942B-EE4662828CAD}
 		{C53079DE-94DD-4E88-80F8-FC42254DC398} = {4F731A34-70C2-41DC-A868-275B6000159F}
 		{718E38F3-ACC9-480D-9BA2-2546EC937487} = {F6299328-C2F2-4ED1-A2A2-0893A7E8F669}
+		{2772BF8A-DD16-4C07-9571-C7A900B6EC23} = {DD3A87E3-C3DE-4049-8A9A-F00592F6CC90}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {44838C67-DF5A-44E4-B15F-02F2F8ECB58E}

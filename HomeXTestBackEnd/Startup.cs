@@ -1,4 +1,7 @@
 ﻿using System.Web.Http;
+using Autofac;
+using Autofac.Integration.WebApi;
+using HomeXTest.API.App_Start;
 using Owin;
 
 namespace HomeXTest.API
@@ -10,12 +13,20 @@ namespace HomeXTest.API
         public void Configuration(IAppBuilder appBuilder)
         {
             // Configure Web API for self-host. 
-            HttpConfiguration config = new HttpConfiguration();
+            var config = new HttpConfiguration();
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            var builder = new ContainerBuilder();
+            IocConfig.RegisterDependencies(builder);
+            var container = builder.Build();
+            config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
+
+            appBuilder.UseAutofacMiddleware(container);
+            appBuilder.UseAutofacWebApi(config);
 
             appBuilder.UseWebApi(config);
         }

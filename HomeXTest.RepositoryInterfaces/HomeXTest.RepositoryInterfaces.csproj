@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C53079DE-94DD-4E88-80F8-FC42254DC398}</ProjectGuid>
+    <ProjectGuid>{2772BF8A-DD16-4C07-9571-C7A900B6EC23}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HomeXTest.Repository</RootNamespace>
-    <AssemblyName>HomeXTest.Repository</AssemblyName>
+    <RootNamespace>HomeXTest.RepositoryInterfaces</RootNamespace>
+    <AssemblyName>HomeXTest.RepositoryInterfaces</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,17 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\..\..\NuGetPackages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\..\..\NuGetPackages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,23 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HomeXTestDbContext.cs" />
-    <Compile Include="HomeXTestRepository.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HomeXTest.Domain\HomeXTest.Domain.csproj">
-      <Project>{718e38f3-acc9-480d-9ba2-2546ec937487}</Project>
-      <Name>HomeXTest.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HomeXTest.RepositoryInterfaces\HomeXTest.RepositoryInterfaces.csproj">
-      <Project>{2772bf8a-dd16-4c07-9571-c7a900b6ec23}</Project>
-      <Name>HomeXTest.RepositoryInterfaces</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
