@@ -15,6 +15,9 @@ namespace HomeXTest.API.App_Start
 
             builder.RegisterType<HomeXTestRepository<Activity>>()
                 .As<IRepository<Activity>>().InstancePerRequest();
+
+            builder.RegisterType<HomeXTestRepository<ActivitiesPeople>>()
+                .As<IRepository<ActivitiesPeople>>().InstancePerRequest();
         }
     }
 }
