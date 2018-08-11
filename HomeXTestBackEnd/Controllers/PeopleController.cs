@@ -1,21 +1,47 @@
-﻿using System.Web.Http;
+﻿using HomeXTest.Domain.Models;
+using System;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace HomeXTest.API.Controllers
 {
-    public class PeopleController: ApiController
+    public class PeopleController : ApiController
     {
-        [HttpGet]
-        public IHttpActionResult Get()
+        private readonly HttpClient _client = new HttpClient();
+
+        public PeopleController()
         {
-            return Ok();
-            //TODO call HomeX API and return data
+            _client.BaseAddress = new Uri("http://interview.homex.io/api/");
+            _client.DefaultRequestHeaders.Accept.Clear();
+            _client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         [HttpGet]
-        public IHttpActionResult Get(int id)
+        public async Task<IHttpActionResult> Get(int id)
         {
-            //TODO call HomeX API and return data
-            return Ok();
+            if (id <= 0)
+                return BadRequest("Invalid person id");
+
+            Person person;
+            var uri = $"http://interview.homex.io/api/people/{id}";
+            var response = await _client.GetAsync(uri);
+            if (!response.IsSuccessStatusCode)
+                return NotFound();
+
+            try
+            {
+                person = await response.Content.ReadAsAsync<Person>();
+            }
+            catch (Exception)
+            {
+                // Do not return stack traces (write to a log/email instead)
+                return InternalServerError();
+            }
+            
+            return Ok(person);
         }
     }
 }

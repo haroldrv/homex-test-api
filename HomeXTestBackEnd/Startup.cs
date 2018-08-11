@@ -1,7 +1,11 @@
-﻿using System.Web.Http;
+﻿using System.Linq;
+using System.Net.Http.Formatting;
+using System.Web.Http;
 using Autofac;
 using Autofac.Integration.WebApi;
 using HomeXTest.API.App_Start;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Owin;
 
 namespace HomeXTest.API
@@ -19,6 +23,10 @@ namespace HomeXTest.API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
+            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
 
             var builder = new ContainerBuilder();
             IocConfig.RegisterDependencies(builder);

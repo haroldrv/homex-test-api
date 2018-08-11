@@ -1,9 +1,8 @@
-﻿using HomeXTest.Repository;
+﻿using HomeXTest.Domain.Models;
+using HomeXTest.RepositoryInterfaces;
 using System.Data.Entity;
 using System.Threading.Tasks;
 using System.Web.Http;
-using HomeXTest.Domain.Models;
-using HomeXTest.RepositoryInterfaces;
 
 namespace HomeXTest.API.Controllers
 {
