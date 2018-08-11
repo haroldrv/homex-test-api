@@ -23,6 +23,8 @@ namespace HomeXTest.API
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            config.MapHttpAttributeRoutes();
+
             var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             config.Formatters.Remove(config.Formatters.XmlFormatter);

@@ -56,13 +56,13 @@ namespace HomeXTest.API.Controllers
 
             foreach (var node in nodes)
             {
-                node.Children = await BuildTreeAsync(node);
+                node.Children = await GetChildNodesAsync(node);
             }
 
             return Ok(nodes);
         }
 
-        private async Task<List<ActivityNode>> BuildTreeAsync(ActivityNode node)
+        private async Task<List<ActivityNode>> GetChildNodesAsync(ActivityNode node)
         {
             var children = await _activitiesRepo.GetAll()
                 .Where(activity => activity.parent_activity_id == node.Id)
@@ -87,7 +87,7 @@ namespace HomeXTest.API.Controllers
 
             foreach (var child in node.Children)
             {
-                child.Children = await BuildTreeAsync(child);
+                child.Children = await GetChildNodesAsync(child);
                 child.People = await GetPeopleAsync(child);
             }
 
