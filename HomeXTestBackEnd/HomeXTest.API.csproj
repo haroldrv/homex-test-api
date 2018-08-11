@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C48DAD5B-228A-44D8-B009-D00AA713F469}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>HomeXTestBackEnd</RootNamespace>
-    <AssemblyName>HomeXTestBackEnd</AssemblyName>
+    <RootNamespace>HomeXTest.API</RootNamespace>
+    <AssemblyName>HomeXTest.API</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

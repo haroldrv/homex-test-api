@@ -1,7 +1,7 @@
-﻿using Owin;
-using System.Web.Http;
+﻿using System.Web.Http;
+using Owin;
 
-namespace HomeXTestBackEnd
+namespace HomeXTest.API
 {
     public class Startup
     {
