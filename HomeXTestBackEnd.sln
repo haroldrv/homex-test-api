@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeXTestBackEnd", "HomeXTestBackEnd\HomeXTestBackEnd.csproj", "{C48DAD5B-228A-44D8-B009-D00AA713F469}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C48DAD5B-228A-44D8-B009-D00AA713F469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C48DAD5B-228A-44D8-B009-D00AA713F469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C48DAD5B-228A-44D8-B009-D00AA713F469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C48DAD5B-228A-44D8-B009-D00AA713F469}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44838C67-DF5A-44E4-B15F-02F2F8ECB58E}
+	EndGlobalSection
+EndGlobal
