@@ -1,12 +1,11 @@
-﻿using System.Linq;
-using System.Net.Http.Formatting;
-using System.Web.Http;
-using Autofac;
+﻿using Autofac;
 using Autofac.Integration.WebApi;
 using HomeXTest.API.App_Start;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Owin;
+using System.Linq;
+using System.Net.Http.Formatting;
+using System.Web.Http;
 
 namespace HomeXTest.API
 {

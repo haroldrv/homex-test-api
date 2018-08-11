@@ -14,11 +14,8 @@ namespace HomeXTest.API
             using (WebApp.Start<Startup>(url: baseAddress))
             {
                 // Create HttpCient and make a request to api/values 
-                var client = new HttpClient();
-                var response = client.GetAsync(baseAddress + "api/people").Result;
-
-                Console.WriteLine(response);
-                Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+                
+                Console.WriteLine($"Listening on {baseAddress}");
                 Console.ReadLine();
             }
         }
