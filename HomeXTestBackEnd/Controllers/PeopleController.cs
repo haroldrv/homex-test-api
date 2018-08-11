@@ -1,20 +1,21 @@
-﻿using System.Collections.Generic;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace HomeXTest.API.Controllers
 {
     public class PeopleController: ApiController
     {
-        // GET api/values 
-        public IEnumerable<string> Get()
+        [HttpGet]
+        public IHttpActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            return Ok();
+            //TODO call HomeX API and return data
         }
 
-        // GET api/values/5 
-        public string Get(int id)
+        [HttpGet]
+        public IHttpActionResult Get(int id)
         {
-            return "value";
+            //TODO call HomeX API and return data
+            return Ok();
         }
     }
 }
